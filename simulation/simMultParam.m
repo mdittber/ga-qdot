@@ -1,5 +1,5 @@
 %********************************************************************
-% Writes cmd files for OMEN with different parameters
+% Writes cmd files and simulates with OMEN for different parameters
 %********************************************************************
 
 
@@ -9,10 +9,10 @@
 contIndice =0; %will be used for all created cmdfiles
 
 
-CMDFILEFOLDER = 'cmdFiles';
+OUTPUTDIR = 'simData';
 
-mkdir cmdFiles;
-
+mkdir( OUTPUTDIR );
+cd( OUTPUTDIR );
 
 %********************************************************************
 %PARAMETERS MATERIAL 1
@@ -87,10 +87,10 @@ def_mat(2).coord                = [0.0 0.0 0.0];    %[xcenter ycenter zcenter]
 default.geometry = def_mat;
 
 %********************************************************************
-%WRITE CMD FILES FOR MATERIAL 1
+%WRITE CMD FILES AND SIMULATE FOR MATERIAL 1
 %********************************************************************
 
-contIndice = writeAllCmdFiles(default, CMDFILEFOLDER, contIndice);
+simAll(default);
 clear default def_mat;
 
 
@@ -98,7 +98,5 @@ clear default def_mat;
 %PARAMETERS MATERIAL 2
 %********************************************************************
 
-%********************************************************************
-% WRITE CMD FILES
-%********************************************************************
 
+cd ..;
