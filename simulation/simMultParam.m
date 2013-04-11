@@ -35,7 +35,7 @@ default = qdot();
 %Parameters
 %********************************************************************
 
-default.mat_name                = 'PbS';            %material_model
+default.mat_name                = 'Cd_Se';            %material_model
 
 
 default.a0                      = 0.582;            %lattice constant

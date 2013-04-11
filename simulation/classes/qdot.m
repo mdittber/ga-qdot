@@ -38,6 +38,25 @@ classdef qdot
         function obj = qdot()
         end
         
+        %return selected parameters in a struct
+        function params = getSelectedParam(obj)
+            params = struct(...
+                'mat_name', obj.mat_name,...
+                'a0', obj.a0 ...
+                );
+            
+            for i = 1: obj.no_mat
+                
+                params.Id(i) = obj.geometry(i).id;
+                params.Radius(i) = obj.geometry(i).radius;
+              
+            end
+        end
+        
+        %return all parameters in a struct
+        function getAllParam()
+            
+        end
 
     end
     
