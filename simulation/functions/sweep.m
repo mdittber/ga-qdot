@@ -23,11 +23,13 @@ function dots = sweep(def_dot)
         l=l+1;
         end
     end
-
-    dots(length(permMatrix)) = qdot;
+    
+    [~, N] = size(permMatrix); %Number of permutations
+   
+    dots( N ) = qdot; %initialize N qdots
     
 %     Assign Values to the new dots
-    for i = 1:length(permMatrix)
+    for i = 1:N
         
         dots(i) = def_dot;
         

@@ -6,8 +6,6 @@
 %********************************************************************
 %CREATE AND DEFINE DIRECTORIES
 %********************************************************************
-contIndice =0; %will be used for all created cmdfiles
-
 
 OUTPUTDIR = 'simData';
 
@@ -35,7 +33,7 @@ default = qdot();
 %Parameters
 %********************************************************************
 
-default.mat_name                = 'Cd_Se';            %material_model
+default.mat_name                = 'CdS_CdSe';            %material_model
 
 
 default.a0                      = 0.582;            %lattice constant
@@ -46,7 +44,7 @@ default.open_system             = 0;
 default.tb                      = 10;              	%tight-binding order
 default.dsp3                    = 30;             	%passivation energy [eV]
 
-default.n_of_modes              = 14;               %number of modes for bandstructure calculation
+default.n_of_modes              = 4;               %number of modes for bandstructure calculation
 
 default.max_bond_def            = 0.1;              %maximum relative bond deformation (should only be changed if very large strain)
 
@@ -73,7 +71,7 @@ def_mat(1) = geometry();
 def_mat(1).type                 = 'sphere';			%type of material: square or circle
 def_mat(1).cs                   = 'yes';            %does the material determine the nanowire cross section 
 def_mat(1).id                   = 2;
-def_mat(1).radius               = 2.0;              %radius of circle
+def_mat(1).radius               = 1.0;              %radius of circle
 def_mat(1).coord                = [0.0 0.0 0.0];	%[xcenter ycenter zcenter]
 
 def_mat(2) = geometry();
@@ -81,7 +79,7 @@ def_mat(2) = geometry();
 def_mat(2).type                 = 'sphere';			%type of material: square or circle
 def_mat(2).cs                   = 'yes';            %does the material determine the nanowire cross section 
 def_mat(2).id                   = 1;
-def_mat(2).radius               = [7.1,8.3,3];      %radius of circle
+def_mat(2).radius               = [2.0,3.0,2];      %radius of circle
 def_mat(2).coord                = [0.0 0.0 0.0];    %[xcenter ycenter zcenter]
 
 default.geometry = def_mat;

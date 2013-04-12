@@ -55,7 +55,7 @@ function simAll(def_dot)
         
         t2 = tic;   %measure time of single simulation
         
-        UNIXCOMMAND = ['./', CMDFILENAME]; %create command string
+        UNIXCOMMAND = ['../../../OMEN_ethz-amd64 ', CMDFILENAME] %create command string
         [status(i), cmdout] = unix( UNIXCOMMAND) ; %execute
 
         singleTime = toc(t2);
