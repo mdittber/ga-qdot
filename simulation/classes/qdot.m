@@ -33,41 +33,31 @@ classdef qdot
     
     
     methods
+
         
-%       Constructor
-        function obj = qdot()
-        end
-        
-        %return selected parameters in a struct
-        function params = getSelectedParam(obj)
+        function params = getSelParam(obj)        
+            %return selected parameters in a struct or cell
             params = struct(...
                 'mat_name', obj.mat_name,...
                 'a0', obj.a0 ...
                 );
             
             for i = 1: obj.no_mat
-                
                 params.Id(i) = obj.geometry(i).id;
                 params.Radius(i) = obj.geometry(i).radius;
               
             end
         end
+
         
-        %return all parameters in a struct
-        function getAllParam()
-            
+        function getGeo(obj)
+            %display geometry
+            for i =1:length(obj.geometry)
+                obj.geometry(i)
+            end
         end
 
+        
     end
-    
-    
-% only path and filenames or load only when used    
-%     properties
-%         layer_matrix
-%         CB_V
-%         CB_E
-%         VB_V
-%         VB_E
-%     end
-    
+   
 end

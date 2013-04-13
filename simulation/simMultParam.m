@@ -88,7 +88,7 @@ default.geometry = def_mat;
 %WRITE CMD FILES AND SIMULATE FOR MATERIAL 1
 %********************************************************************
 
-simAll(default);
+DBpart1 = simAll(default);
 clear default def_mat;
 
 
@@ -98,3 +98,4 @@ clear default def_mat;
 
 
 cd ..;
+
