@@ -1,7 +1,13 @@
 classdef qdot
-    properties
+
+	% Parameters for a structure to be simulated by OMEN
+	%********************************************************************	
+    
+	properties
         mat_name
         
+		lattice_type
+		
         a0
         first_atom
         open_system
@@ -33,10 +39,10 @@ classdef qdot
     
     
     methods
-
-        
+					
         function params = getSelParam(obj)        
             %return selected parameters in a struct or cell
+					
             params = struct(...
                 'mat_name', obj.mat_name,...
                 'a0', obj.a0 ...
@@ -52,6 +58,7 @@ classdef qdot
         
         function getGeo(obj)
             %display geometry
+					
             for i =1:length(obj.geometry)
                 obj.geometry(i)
             end

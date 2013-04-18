@@ -28,12 +28,13 @@ default = qdot();
 % 
 % Note: if radius 1 and 2 are both swept, they must be swept over an equal
 % nr of values! Furthermore  r1 < r2
-%
+
+
 %********************************************************************
 %Parameters
 %********************************************************************
 
-default.mat_name                = 'CdS_CdSe';            %material_model
+default.mat_name                = 'CdS_CdSe';       %material_model
 
 
 default.a0                      = 0.582;            %lattice constant

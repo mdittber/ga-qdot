@@ -1,11 +1,14 @@
 function writeCmdFile(qdot, filename)
-% writes the cmdfile for qdot into the current directory
+
+% writes the cmdfile for qdot object into the current directory
+%********************************************************************
 
     file = fopen(filename,'w');
         
     fprintf(file,'// Command file for OMEN \n \n');
             
     printVar(file, 'mat_name',qdot.mat_name, 'material_model');
+    printVar(file, 'lattice_type',qdot.lattice_type, 'lattice');
     
     printVar(file, 'a0',qdot.a0, 'lattice constant');
     printVar(file, 'first_atom',qdot.first_atom, 'atom situated at [0 0 0]');
