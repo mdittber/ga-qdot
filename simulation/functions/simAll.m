@@ -62,7 +62,7 @@ function DBpart = simAll(def_dot)
 	% WRITE CMD FILE
             
         CMDFILENAME = 'qdot_cmd'; 
-        % CMDFILENAME =['cmd_' simTimestamp];
+       	 	% CMDFILENAME =['cmd_' simTimestamp];
         
         writeCmdFile(dots(i), CMDFILENAME); %write the cmdfiles
 			
@@ -83,7 +83,7 @@ function DBpart = simAll(def_dot)
         simlogfid = fopen(simlogFile, 'w');
 
         if  simSuccess ==1  %simulation successful 
-            fprintf(simlogfid, 'Simulation successful.\n');
+            fprintf(simlogfid, 'Simulation SUCCESSFUL.\n');
         else
             fprintf(simlogfid, 'Simulation FAILED.\n');
         end

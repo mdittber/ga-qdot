@@ -37,8 +37,6 @@ Vdmax
 % no_channel_mat
 % no_oxide_mat
 
-
-% as array:
 mat_type(i)
 % mat_cs(i)
 mat_id(i)
